@@ -21,12 +21,12 @@ $FontFamilyPoppins: 'Poppins', sans-serif
 // ### Body, Call-to-actions
 $FontFamilyOpen: 'Open Sans', sans-serif
 
-@mixin btn($sizeW, $radiusB, $bg, $colorText)
+@mixin btn($sizeW, $padding, $radiusB, $bg, $colorText)
   display: inline-block
   width: $sizeW
   padding: 10px
-  border-radius: $radiusB
   background: $bg
+  border-radius: $radiusB
   color: $colorText
   text-decoration: none
   transition: 200ms
@@ -49,27 +49,33 @@ $FontFamilyOpen: 'Open Sans', sans-serif
 html
   &::-webkit-scrollbar
     display: none
-
+body
+  font-size: $FontSize
 .header
-  padding: 80px 100px
+  min-height: 100vh
+  padding: 50px 100px
   background: $VeryPaleCyan
   background-image: url('./../images/bg-hero-desktop.svg')
   background-repeat: no-repeat
   background-position: bottom center
   background-size: cover
+  display: grid
+  grid-template-rows: 92px auto
   .header__header
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 50px
     .header__link
-      @include btn(180px, 20px, white, $VeryDarkCyan)
+      @include btn(180px,10px, 20px, white, $VeryDarkCyan)
       @include boxShadow
   .header__main
     display: flex
     justify-content: space-between
+    align-items: center
     gap: 10px
     .main__information
+      max-width: 520px
       .information__title
         max-width: 400px
         font-size: 2rem
@@ -78,7 +84,7 @@ html
         margin: 30px 0 25px
         font-size: $FontSize
       .information__link
-        @include btn( 230px, 20px, $Pink,white )
+        @include btn( 230px,20px, 20px, $Pink,white )
         font-size: .9em
         &:hover
           filter: brightness(1.89) contrast(1) hue-rotate(25deg)
@@ -122,7 +128,7 @@ html
     z-index: 1
     @include boxShadow
     .start__link
-      @include btn( 230px, 20px, $Pink,white )
+      @include btn( 230px, 20px, 20px, $Pink,white )
       font-size: .9em
       margin-block-start: 20px
       &:hover
@@ -134,7 +140,7 @@ html
   gap: 20px
   display: flex
   justify-content: space-around
-  align-items: flex-start
+  align-items: stretch
   flex-wrap: wrap
   position: relative
   color: $VeryPaleCyan
@@ -159,10 +165,10 @@ html
   .footer__career
     @include list
   .footer__footer
-    height: 100%
     display: flex
     flex-direction: column
     justify-content: space-between
+    gap: 30px
     .footer__icon
       display: flex
       list-style: none
@@ -203,7 +209,6 @@ html
   .footer
     .footer__footer
       align-items: center
-      gap: 30px
 
 @media screen and (max-width:770px)
   .header

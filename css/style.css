@@ -8,13 +8,19 @@
 html::-webkit-scrollbar {
   display: none; }
 
+body {
+  font-size: 18px; }
+
 .header {
-  padding: 80px 100px;
+  min-height: 100vh;
+  padding: 50px 100px;
   background: #ebfbff;
   background-image: url("./../images/bg-hero-desktop.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: cover; }
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 92px auto; }
   .header .header__header {
     display: flex;
     justify-content: space-between;
@@ -24,8 +30,8 @@ html::-webkit-scrollbar {
       display: inline-block;
       width: 180px;
       padding: 10px;
-      border-radius: 20px;
       background: white;
+      border-radius: 20px;
       color: #00252e;
       text-decoration: none;
       transition: 200ms;
@@ -35,28 +41,31 @@ html::-webkit-scrollbar {
   .header .header__main {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10px; }
-    .header .header__main .main__information .information__title {
-      max-width: 400px;
-      font-size: 2rem;
-      font-family: "Poppins", sans-serif; }
-    .header .header__main .main__information .information__details {
-      margin: 30px 0 25px;
-      font-size: 18px; }
-    .header .header__main .main__information .information__link {
-      display: inline-block;
-      width: 230px;
-      padding: 10px;
-      border-radius: 20px;
-      background: #ff52bf;
-      color: white;
-      text-decoration: none;
-      transition: 200ms;
-      text-align: center;
-      font-weight: bold;
-      font-size: 0.9em; }
-      .header .header__main .main__information .information__link:hover {
-        filter: brightness(1.89) contrast(1) hue-rotate(25deg); }
+    .header .header__main .main__information {
+      max-width: 520px; }
+      .header .header__main .main__information .information__title {
+        max-width: 400px;
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif; }
+      .header .header__main .main__information .information__details {
+        margin: 30px 0 25px;
+        font-size: 18px; }
+      .header .header__main .main__information .information__link {
+        display: inline-block;
+        width: 230px;
+        padding: 10px;
+        background: #ff52bf;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+        transition: 200ms;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.9em; }
+        .header .header__main .main__information .information__link:hover {
+          filter: brightness(1.89) contrast(1) hue-rotate(25deg); }
     .header .header__main .main__img .img__illustration {
       width: 100%; }
 
@@ -98,8 +107,8 @@ html::-webkit-scrollbar {
       display: inline-block;
       width: 230px;
       padding: 10px;
-      border-radius: 20px;
       background: #ff52bf;
+      border-radius: 20px;
       color: white;
       text-decoration: none;
       transition: 200ms;
@@ -116,7 +125,7 @@ html::-webkit-scrollbar {
   gap: 20px;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
   position: relative;
   color: #ebfbff; }
@@ -147,10 +156,10 @@ html::-webkit-scrollbar {
     gap: 20px;
     list-style: none; }
   .footer .footer__footer {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    gap: 30px; }
     .footer .footer__footer .footer__icon {
       display: flex;
       list-style: none;
@@ -189,8 +198,7 @@ html::-webkit-scrollbar {
       padding: 50px 25px; }
 
   .footer .footer__footer {
-    align-items: center;
-    gap: 30px; } }
+    align-items: center; } }
 @media screen and (max-width: 770px) {
   .header {
     padding: 20px 50px; }
