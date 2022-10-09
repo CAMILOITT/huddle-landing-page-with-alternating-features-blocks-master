@@ -12,7 +12,7 @@ body {
   font-size: 18px; }
 
 .header {
-  min-height: 70vh;
+  min-height: 71vh;
   padding: 50px 100px;
   background: #ebfbff;
   background-image: url("./../images/bg-hero-desktop.svg");
@@ -56,14 +56,15 @@ body {
       .header .header__main .main__information .information__link {
         display: inline-block;
         width: 230px;
-        padding: 10px;
+        padding: 20px;
         background: #ff52bf;
-        border-radius: 20px;
+        border-radius: 50px;
         color: white;
         text-decoration: none;
         transition: 200ms;
         text-align: center;
         font-weight: bold;
+        width: 270px;
         font-size: 0.9em; }
         .header .header__main .main__information .information__link:hover {
           filter: brightness(1.89) contrast(1) hue-rotate(25deg); }
@@ -96,7 +97,7 @@ body {
     .main .main__section .section__illustration {
       width: clamp(270px, 50%, 300px); }
   .main .main__start {
-    width: 430px;
+    width: 600px;
     background: white;
     position: absolute;
     bottom: -45px;
@@ -108,33 +109,37 @@ body {
     z-index: 1;
     box-shadow: 0px 0px 10px -5px #808d99; }
     .main .main__start .start__question {
-      color: #00252e; }
+      color: #00252e;
+      font-size: 1.2em;
+      font-family: "Poppins", sans-serif; }
     .main .main__start .start__link {
       display: inline-block;
       width: 230px;
-      padding: 10px;
+      padding: 20px;
       background: #ff52bf;
-      border-radius: 20px;
+      border-radius: 50px;
       color: white;
       text-decoration: none;
       transition: 200ms;
       text-align: center;
       font-weight: bold;
-      font-size: 0.9em;
+      width: 270px;
+      font-size: 0.8em;
       margin-block-start: 20px; }
       .main .main__start .start__link:hover {
         filter: brightness(1.89) contrast(1) hue-rotate(25deg); }
 
 .footer {
   background: #00252e;
-  padding: 100px 50px;
+  padding: 150px 60px;
   gap: 20px;
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: wrap;
   position: relative;
-  color: #ebfbff; }
+  color: #ebfbff;
+  font-size: 0.8em; }
   .footer .footer__addres {
     max-width: 320px; }
     .footer .footer__addres .addres__logo {
@@ -165,7 +170,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px; }
+    gap: 30px;
+    align-self: flex-end;
+    height: 170px; }
     .footer .footer__footer .footer__icon {
       display: flex;
       list-style: none;
@@ -204,7 +211,8 @@ body {
       padding: 50px 25px; }
 
   .footer .footer__footer {
-    align-items: center; } }
+    align-items: center;
+    height: auto; } }
 @media screen and (max-width: 770px) {
   .header {
     padding: 20px 50px; }
