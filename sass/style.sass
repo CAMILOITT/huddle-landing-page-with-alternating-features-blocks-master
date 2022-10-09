@@ -74,6 +74,7 @@ body
     justify-content: space-between
     align-items: center
     gap: 10px
+    color: $VeryDarkCyan
     .main__information
       max-width: 520px
       .information__title
@@ -113,6 +114,9 @@ body
       .information__title
         margin-block-end: 20px
         font-family: $FontFamilyPoppins
+        color: $VeryDarkCyan
+      .information__details
+        color: $GrayishBlue
     .section__illustration
       width: clamp(270px, 50%, 300px)
   .main__start
@@ -127,6 +131,8 @@ body
     border-radius: 10px
     z-index: 1
     @include boxShadow
+    .start__question
+      color: $VeryDarkCyan
     .start__link
       @include btn( 230px, 20px, 20px, $Pink,white )
       font-size: .9em

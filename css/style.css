@@ -42,7 +42,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px; }
+    gap: 10px;
+    color: #00252e; }
     .header .header__main .main__information {
       max-width: 520px; }
       .header .header__main .main__information .information__title {
@@ -88,7 +89,10 @@ body {
       width: clamp(270px, 50%, 445px); }
       .main .main__section .section__information .information__title {
         margin-block-end: 20px;
-        font-family: "Poppins", sans-serif; }
+        font-family: "Poppins", sans-serif;
+        color: #00252e; }
+      .main .main__section .section__information .information__details {
+        color: #808d99; }
     .main .main__section .section__illustration {
       width: clamp(270px, 50%, 300px); }
   .main .main__start {
@@ -103,6 +107,8 @@ body {
     border-radius: 10px;
     z-index: 1;
     box-shadow: 0px 0px 10px -5px #808d99; }
+    .main .main__start .start__question {
+      color: #00252e; }
     .main .main__start .start__link {
       display: inline-block;
       width: 230px;
